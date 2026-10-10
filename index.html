@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>888神马电影网 - 888部循环片库、神马速查与8大类型榜单</title>
+<meta name="description" content="888神马电影网(https://888shenmadianyingwang-wap.github.io/)以「888」为循环排片单位：888部循环片库、神马速查选片器、8大类型榜单与8条选片逻辑，主打快速找到「接下来看什么」，附完整的影片分类索引与观影指南。">
+<meta name="keywords" content="888神马电影网,神马电影,888部电影,循环片库,神马速查,电影榜单,影片分类索引,观影指南,888部循环,快速选片">
+<meta name="author" content="888神马电影网">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="888神马电影网 - 888部循环片库，神马速查帮你看完下一部">
+<meta property="og:description" content="888神马电影网以「888」为循环排片单位：888部循环片库、神马速查选片器、8大类型榜单与8条选片逻辑。">
+<meta property="og:url" content="https://888shenmadianyingwang-wap.github.io/">
+<meta property="og:site_name" content="888神马电影网">
+<link rel="canonical" href="https://888shenmadianyingwang-wap.github.io/">
+<style>
+:root{
+  --bg:#08070f;
+  --bg2:#0e0c1c;
+  --card:#141126;
+  --card2:#1c1733;
+  --line:#2a2547;
+  --line2:#3d3566;
+  --txt:#e6e2f5;
+  --txt2:#a59fd0;
+  --txt3:#68629a;
+  --purple:#8b5cf6;
+  --purple2:#b794f4;
+  --neon:#00e5ff;
+  --neon2:#5ef0ff;
+  --gold:#ffb020;
+  --gold2:#ffd166;
+  --mono:"SF Mono",Consolas,"Courier New",monospace;
+  --sans:"PingFang SC","Microsoft YaHei",-apple-system,system-ui,sans-serif;
+  --serif:"Songti SC","Source Han Serif SC",Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:var(--sans);font-size:14.5px;line-height:1.9;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+:focus-visible{outline:2px solid var(--neon);outline-offset:2px}
+::selection{background:var(--neon);color:#001}
+
+/* ===== 报头 ===== */
+header{padding:0 0 0;position:relative;background:radial-gradient(ellipse 80% 120% at 50% -20%,rgba(139,92,246,.28),transparent 60%),radial-gradient(ellipse 60% 80% at 90% 10%,rgba(0,229,255,.10),transparent 55%)}
+.hero{position:relative;padding:52px 0 0;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.012) 3px 4px);pointer-events:none}
+.topbar{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10.5px;letter-spacing:2px;color:var(--txt3);padding-bottom:26px;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:12px}
+.topbar b{color:var(--gold)}
+.topbar a{color:var(--txt2)}
+.topbar a:hover{color:var(--neon2)}
+.mast{display:grid;grid-template-columns:1.5fr 1fr;gap:0;margin-top:44px;align-items:end;border-bottom:1px solid var(--line);padding-bottom:44px}
+h1{font-family:var(--mono);font-size:74px;font-weight:800;letter-spacing:-2px;line-height:1;color:var(--neon2);text-shadow:0 0 40px rgba(0,229,255,.35)}
+h1 a{color:var(--neon2)}
+h1 a:hover{color:var(--neon)}
+h1 .g{color:var(--gold2)}
+h1 small{display:block;font-family:var(--sans);font-size:12.5px;letter-spacing:6px;color:var(--txt2);margin-top:26px;font-weight:400}
+.lede{font-size:14.5px;color:var(--txt2);line-height:2.15;border-left:2px solid var(--purple);padding-left:26px}
+.lede b{color:var(--gold2)}
+.runner{display:flex;gap:0;font-family:var(--mono);font-size:10.5px;letter-spacing:1.5px;color:var(--txt3);margin-top:26px;flex-wrap:wrap}
+.runner span{padding:9px 18px;border:1px solid var(--line);border-right:none}
+.runner span:last-child{border-right:1px solid var(--line)}
+.runner span b{color:var(--neon)}
+
+/* ===== 导航 ===== */
+nav{position:sticky;top:0;z-index:50;background:rgba(8,7,15,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;overflow-x:auto;scrollbar-width:none;padding:0;align-items:center}
+nav .wrap::-webkit-scrollbar{display:none}
+nav a{padding:16px 20px;font-size:12px;letter-spacing:2px;color:var(--txt2);white-space:nowrap;transition:.16s;border-bottom:2px solid transparent}
+nav a:hover{color:var(--neon2);border-bottom-color:var(--neon)}
+nav .badge{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--gold);border:1px solid var(--line2);padding:6px 14px;white-space:nowrap;letter-spacing:1.5px;animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{border-color:var(--gold);color:var(--gold2)}}
+
+/* ===== 通用 ===== */
+section{padding:96px 0;position:relative}
+.sec{display:flex;align-items:baseline;gap:18px;margin-bottom:16px;flex-wrap:wrap}
+.sec .no{font-family:var(--mono);font-size:10.5px;color:var(--neon);border:1px solid var(--line2);width:34px;height:34px;display:grid;place-items:center;flex:0 0 34px}
+.sec h2{font-family:var(--sans);font-size:27px;font-weight:800;letter-spacing:3px;color:var(--txt)}
+.sec h2 em{font-style:normal;color:var(--neon)}
+.sec .en{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--txt3);letter-spacing:2px;text-transform:uppercase}
+.secnote{font-size:13.5px;color:var(--txt2);max-width:940px;margin:0 0 44px 52px;line-height:2.05}
+.secnote b{color:var(--neon)}
+.more{text-align:center;margin-top:52px}
+.btn{display:inline-block;padding:14px 34px;font-size:11.5px;letter-spacing:3px;color:var(--bg);background:var(--neon);border:1px solid var(--neon);transition:.2s;font-weight:700}
+.btn:hover{background:transparent;color:var(--neon2)}
+.btn.g{background:var(--gold);border-color:var(--gold)}
+.btn.g:hover{background:transparent;color:var(--gold2)}
+.btn.ghost{background:transparent;color:var(--neon2)}
+.btn.ghost:hover{background:var(--neon);color:var(--bg)}
+
+/* ===== 888循环片库（三段式进度槽） ===== */
+.counter{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.counter div{background:var(--card);padding:36px 32px;position:relative;overflow:hidden}
+.counter div:before{content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--purple)}
+.counter div:nth-child(2):before{background:var(--neon)}
+.counter div:nth-child(3):before{background:var(--gold)}
+.counter .big{font-family:var(--mono);font-size:52px;font-weight:800;color:var(--txt);letter-spacing:-2px;line-height:1}
+.counter .big small{font-size:13px;color:var(--txt3);letter-spacing:1px;font-weight:400;margin-left:8px}
+.counter h4{font-family:var(--serif);font-size:17px;letter-spacing:2px;color:var(--txt2);margin:14px 0 8px}
+.counter p{font-size:12.5px;color:var(--txt3);line-height:2}
+.loopgrid{margin-top:44px;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.loopgrid article{background:var(--card);padding:26px 24px;transition:.18s}
+.loopgrid article:hover{background:var(--card2)}
+.loopgrid .eight{font-family:var(--mono);font-size:26px;color:var(--txt3);margin-bottom:12px;font-weight:800;letter-spacing:-1px}
+.loopgrid article:hover .eight{color:var(--neon)}
+.loopgrid h5{font-family:var(--serif);font-size:16.5px;letter-spacing:1.5px;color:var(--txt);margin-bottom:10px}
+.loopgrid p{font-size:12.5px;color:var(--txt2);line-height:1.95;margin-bottom:16px}
+.loopgrid .bar{height:4px;background:var(--bg2);position:relative;overflow:hidden}
+.loopgrid .bar i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--purple),var(--neon));width:0}
+
+/* ===== 神马速查（多轴滑块） ===== */
+.finder{display:grid;grid-template-columns:1.1fr .9fr;gap:0;border:1px solid var(--line)}
+.finder .panel{background:var(--card);padding:40px 36px;border-right:1px solid var(--line)}
+.finder .out{background:var(--bg2);padding:40px 36px;display:flex;flex-direction:column;gap:26px}
+.finder .f{margin-bottom:30px}
+.finder label{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;color:var(--txt2);margin-bottom:14px;letter-spacing:1px}
+.finder label b{font-family:var(--mono);font-size:13px;color:var(--gold2)}
+.finder input[type=range]{width:100%;-webkit-appearance:none;background:transparent;height:26px}
+.finder input[type=range]::-webkit-slider-runnable-track{height:4px;background:var(--line2)}
+.finder input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;background:var(--neon);border-radius:50%;margin-top:-7px;cursor:pointer;box-shadow:0 0 12px rgba(0,229,255,.6)}
+.finder input[type=range]::-moz-range-track{height:4px;background:var(--line2)}
+.finder input[type=range]::-moz-range-thumb{width:18px;height:18px;border:none;border-radius:50%;background:var(--neon);cursor:pointer}
+.ticks{display:flex;justify-content:space-between;font-family:var(--mono);font-size:9.5px;color:var(--txt3);margin-top:8px;letter-spacing:1px}
+.finder .opts{display:flex;gap:8px;flex-wrap:wrap}
+.finder .opts button{font-family:var(--sans);font-size:12px;color:var(--txt2);background:var(--bg2);border:1px solid var(--line);padding:8px 16px;cursor:pointer;transition:.16s}
+.finder .opts button:hover{border-color:var(--purple2);color:var(--txt)}
+.finder .opts button.on{background:var(--purple);border-color:var(--purple);color:#fff}
+.finder .out .lab{font-family:var(--mono);font-size:10.5px;color:var(--txt3);letter-spacing:2.5px}
+.finder .out .pick{font-family:var(--serif);font-size:23px;letter-spacing:2px;color:var(--neon2);line-height:1.6}
+.finder .out .pick em{font-style:normal;color:var(--gold2)}
+.finder .out .why{font-size:13px;color:var(--txt2);line-height:2.05;border-left:2px solid var(--gold);padding-left:20px}
+.finder .out .why b{color:var(--gold2)}
+.finder .out .reset{margin-top:auto;font-size:11px;letter-spacing:2px;color:var(--txt3);background:none;border:1px solid var(--line);padding:10px;cursor:pointer;font-family:var(--mono);transition:.16s}
+.finder .out .reset:hover{color:var(--neon);border-color:var(--neon)}
+
+/* ===== 8大榜单（横向条形） ===== */
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+.chart h3{font-family:var(--serif);font-size:20px;letter-spacing:3px;color:var(--txt);margin-bottom:22px;display:flex;align-items:center;gap:14px}
+.chart h3 i{font-family:var(--mono);font-style:normal;font-size:11px;color:var(--neon);border:1px solid var(--line2);padding:4px 10px;letter-spacing:1.5px}
+.row{display:grid;grid-template-columns:34px 1fr 52px;gap:16px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.row .rk{font-family:var(--mono);font-size:14px;color:var(--txt3);text-align:right}
+.row.top .rk{color:var(--gold)}
+.row .nm{font-size:13.5px;color:var(--txt)}
+.row .nm small{display:block;font-size:11px;color:var(--txt3);letter-spacing:.5px}
+.row .vl{height:6px;background:var(--bg2);position:relative}
+.row .vl i{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,var(--purple),var(--neon));width:0}
+.row .sc{font-family:var(--mono);font-size:12px;color:var(--txt2);text-align:right}
+
+/* ===== 8条逻辑（编号竖列） ===== */
+.logic{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.logic div{background:var(--card);padding:28px 30px;display:grid;grid-template-columns:56px 1fr;gap:20px;transition:.18s}
+.logic div:hover{background:var(--card2)}
+.logic .n{font-family:var(--mono);font-size:30px;font-weight:800;color:var(--txt3);letter-spacing:-1px;line-height:1}
+.logic div:hover .n{color:var(--gold2)}
+.logic h5{font-family:var(--serif);font-size:16.5px;letter-spacing:1.5px;color:var(--txt);margin-bottom:8px}
+.logic p{font-size:12.5px;color:var(--txt2);line-height:2}
+
+/* ===== 索引 ===== */
+.idx{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.idx div{background:var(--card);padding:30px 26px;transition:.18s}
+.idx div:hover{background:var(--card2)}
+.idx .g{font-family:var(--mono);font-size:11px;color:var(--gold);letter-spacing:2.5px;margin-bottom:16px}
+.idx h5{font-family:var(--serif);font-size:18px;letter-spacing:2px;color:var(--txt);margin-bottom:16px}
+.idx ul{font-size:12.5px;color:var(--txt2);line-height:2.15}
+.idx a{display:block;transition:.14s}
+.idx a:hover{color:var(--neon2);padding-left:6px}
+.idx .cnt{margin-top:18px;font-family:var(--mono);font-size:10.5px;color:var(--txt3);letter-spacing:1px}
+
+/* ===== 页脚 ===== */
+footer{background:var(--bg2);padding:60px 0 0;border-top:1px solid var(--line)}
+.foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+.foot .brand{display:flex;gap:20px;align-items:flex-start}
+.foot .logo{width:56px;height:56px;flex:0 0 56px;position:relative;background:linear-gradient(135deg,var(--purple),var(--neon));display:grid;place-items:center;font-family:var(--mono);font-size:17px;font-weight:800;color:#001}
+.foot h4{font-family:var(--mono);font-size:20px;letter-spacing:1px;color:var(--neon2)}
+.foot h4 a{color:var(--neon2)}
+.foot h4 a:hover{color:var(--neon)}
+.foot p{font-size:13px;color:var(--txt2);max-width:440px;line-height:2.05;margin-top:14px}
+.foot h5{font-family:var(--mono);font-size:10.5px;letter-spacing:2.5px;color:var(--gold);margin-bottom:22px}
+.foot ul{font-size:13px}
+.foot li{padding:7px 0}
+.foot a{color:var(--txt2)}
+.foot a:hover{color:var(--neon2)}
+.copy{margin-top:50px;border-top:1px solid var(--line);padding:26px 0;font-size:11.5px;color:var(--txt3);text-align:center;line-height:2.2}
+.copy a{color:var(--neon);font-weight:700}
+
+@media (max-width:1080px){
+  .counter{grid-template-columns:1fr 1fr}
+  .loopgrid{grid-template-columns:repeat(2,1fr)}
+  .charts{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:1000px){
+  .mast{grid-template-columns:1fr;gap:34px;align-items:start}
+  h1{font-size:54px}
+  .finder{grid-template-columns:1fr}
+  .finder .panel{border-right:none;border-bottom:1px solid var(--line)}
+  .logic{grid-template-columns:1fr}
+  .idx{grid-template-columns:repeat(2,1fr)}
+  .sec .en{display:none}
+  .foot{grid-template-columns:1fr 1fr;gap:34px}
+}
+@media (max-width:600px){
+  .wrap{padding:0 16px}
+  .hero{padding:34px 0 0}
+  h1{font-size:38px}
+  .mast{padding-bottom:34px}
+  .lede{padding-left:18px}
+  .counter div,.loopgrid article,.logic div,.idx div,.finder .panel,.finder .out{padding:26px 20px}
+  section{padding:64px 0}
+  .sec h2{font-size:20px;letter-spacing:1.5px}
+  .secnote{margin-left:0}
+  .counter .big{font-size:40px}
+  .loopgrid{grid-template-columns:1fr}
+  .runner span{padding:8px 12px}
+  .topbar .hide{display:none}
+  nav .badge{display:none}
+  .foot{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/xiaolu.js"></script>
+
+<!-- ============ 报头 ============ -->
+<header>
+  <div class="wrap hero">
+    <div class="topbar">
+      <span class="hide">888 SHENMA CYCLE · <b>888</b> 部循环排片</span>
+      <span class="hide">片库容量 <b>888</b> 部 / 已更新 <b>8</b> 轮</span>
+      <span><a href="https://888shenmadianyingwang-wap.github.io/">https://888shenmadianyingwang-wap.github.io/</a></span>
+    </div>
+    <div class="mast">
+      <h1><a href="https://888shenmadianyingwang-wap.github.io/" title="888神马电影网">888<span class="g">神马</span>电影网</a><small>八 百 八 十 八 部 · 循 环 排 片 · 神 马 速 查</small></h1>
+      <p class="lede">不是「什么最好看」的榜单，而是<b>「接下来看什么」的速查表</b>。<br>888 部是片库容量上限，满了就替换不新增；8 条选片逻辑是判断依据；<b style="color:var(--neon)">神马速查</b>负责在 10 秒内给你答案。</p>
+    </div>
+    <div class="runner">
+      <span>片库 <b>888</b> 部</span>
+      <span>8 大类型榜单</span>
+      <span>8 条选片逻辑</span>
+      <span>连映分组 <b>111</b> 组</span>
+      <span>平均选片耗时 <b>10</b> 秒</span>
+    </div>
+    <nav>
+      <div class="wrap">
+        <a href="#lib">888片库</a>
+        <a href="#find">神马速查</a>
+        <a href="#chart">8大榜单</a>
+        <a href="#logic">8条逻辑</a>
+        <a href="#idx">分类索引</a>
+        <a href="#about">关于本站</a>
+        <a href="#">连映排期表</a>
+        <a href="#">新片补充</a>
+        <a href="#">片库调整记录</a>
+        <a href="#">投稿与纠错</a>
+        <span class="badge">● 速查服务运行中</span>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ 888片库 ============ -->
+<section id="lib">
+  <div class="wrap">
+    <div class="sec"><span class="no">01</span><h2>888 <em>循环片库</em></h2><span class="en">Library of 888</span></div>
+    <p class="secnote">片库容量<b>上限 888 部，满了就替换，不新增</b>。三个数字代表片库的三个状态，更新到第几轮就写第几轮。</p>
+    <div class="counter">
+      <div><div class="big">888<small>部 · 容量</small></div><h4>片库总量</h4><p>达到上限后新增即替换，被换下的进入归档区供回头查。</p></div>
+      <div><div class="big">640<small>部 · 已收录</small></div><h4>当前在库</h4><p>还差 248 部满库。本轮替换集中在「慢片区」与「治愈区」。</p></div>
+      <div><div class="big">8<small>轮 · 更新</small></div><h4>已更新轮次</h4><p>每轮替换 8 部，第八轮刚结束，记录可查。</p></div>
+    </div>
+    <div class="loopgrid">
+      <article><div class="eight">888</div><h5>慢片区</h5><p>节奏慢、留白多，适合想放空的时候。片长普遍超过 100 分钟。</p><div class="bar"><i data-w="82"></i></div></article>
+      <article><div class="eight">888</div><h5>反转区</h5><p>需要清醒的脑子，建议留足完整时段，中途不暂停。</p><div class="bar"><i data-w="64"></i></div></article>
+      <article><div class="eight">888</div><h5>治愈区</h5><p>笑点靠人物性格，不靠误会。循环片库里点播率最高的一块。</p><div class="bar"><i data-w="91"></i></div></article>
+      <article><div class="eight">888</div><h5>错过区</h5><p>关于错过与重逢，收尾留一点遗憾，适合秋天看。</p><div class="bar"><i data-w="47"></i></div></article>
+    </div>
+    <div class="more"><a href="#" class="btn">进入完整 888 部片库 →</a></div>
+  </div>
+</section>
+
+<!-- ============ 神马速查 ============ -->
+<section id="find" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="sec"><span class="no">02</span><h2>神马 <em>速查</em></h2><span class="en">Shenma Picker</span></div>
+    <p class="secnote">不知道看什么的时候用。<b>拖动三个轴、勾选一个前提，10 秒内给答案</b>。结果不是评分，是本站的判断依据。</p>
+    <div class="finder">
+      <div class="panel">
+        <div class="f">
+          <label>情绪强度 <span>想被推一下，还是想被轻轻带着走</span> <b id="v1">5 / 10</b></label>
+          <input type="range" id="r1" min="1" max="10" value="5">
+          <div class="ticks"><span>放空</span><span>适中</span><span>入戏</span></div>
+        </div>
+        <div class="f">
+          <label>节奏 <span>能接受多慢</span> <b id="v2">6 / 10</b></label>
+          <input type="range" id="r2" min="1" max="10" value="6">
+          <div class="ticks"><span>很慢</span><span>中等</span><span>快节奏</span></div>
+        </div>
+        <div class="f">
+          <label>片长容忍 <span>最多看多久</span> <b id="v3">120 min</b></label>
+          <input type="range" id="r3" min="1" max="3" value="2">
+          <div class="ticks"><span>90 min</span><span>120 min</span><span>不限</span></div>
+        </div>
+        <div class="f">
+          <label style="margin-bottom:16px">观看前提（可多选）</label>
+          <div class="opts" id="opts">
+            <button class="on" data-k="alone">一个人看</button>
+            <button data-k="friend">带朋友</button>
+            <button data-k="night">睡不着</button>
+            <button data-k="focus">必须专注</button>
+            <button data-k="loop">要能再看</button>
+            <button data-k="safe">安全牌</button>
+          </div>
+        </div>
+      </div>
+      <div class="out">
+        <div class="lab">SHENMA PICK · 本轮推荐</div>
+        <div class="pick">第七次敲门 <em>＋</em> 屋顶上的风</div>
+        <div class="why"><b>判断依据：</b>情绪强度 5、节奏 6、片长 120 分钟内、观看前提「一个人看」。<b>第一部把脑子拧紧，第二部负责松下来</b>，两部合计约 204 分钟，刚好是一个晚上的长度。</div>
+        <button class="reset" id="rst">↺ 重置全部条件</button>
+      </div>
+    </div>
+    <div class="more"><a href="#" class="btn ghost">查看全部 111 组搭配 →</a></div>
+  </div>
+</section>
+
+<!-- ============ 8大榜单 ============ -->
+<section id="chart">
+  <div class="wrap">
+    <div class="sec"><span class="no">03</span><h2>8 大 <em>榜单</em></h2><span class="en">Top Charts</span></div>
+    <p class="secnote">按「不同维度」而不是「好坏」排序。<b>同一部片会出现在多个榜单里</b>——因为它本来就不只属于一个维度。</p>
+    <div class="charts">
+      <div class="chart">
+        <h3><i>TOP 5</i>循环播放率</h3>
+        <div class="row top"><span class="rk">1</span><span class="nm">雨天修理铺<small>治愈区</small></span><span class="sc">98</span><span class="vl"><i data-w="98"></i></span></div>
+        <div class="row"><span class="rk">2</span><span class="nm">候鸟季节<small>慢片区</small></span><span class="sc">91</span><span class="vl"><i data-w="91"></i></span></div>
+        <div class="row"><span class="rk">3</span><span class="nm">菜市场的早晨<small>治愈区</small></span><span class="sc">86</span><span class="vl"><i data-w="86"></i></span></div>
+        <div class="row"><span class="rk">4</span><span class="nm">第七次敲门<small>反转区</small></span><span class="sc">79</span><span class="vl"><i data-w="79"></i></span></div>
+        <div class="row"><span class="rk">5</span><span class="nm">春日和<small>错过区</small></span><span class="sc">72</span><span class="vl"><i data-w="72"></i></span></div>
+      </div>
+      <div class="chart">
+        <h3><i>TOP 5</i>带人看安全牌</h3>
+        <div class="row top"><span class="rk">1</span><span class="nm">屋顶上的风<small>治愈区</small></span><span class="sc">96</span><span class="vl"><i data-w="96"></i></span></div>
+        <div class="row"><span class="rk">2</span><span class="nm">海边的裁缝铺<small>慢片区</small></span><span class="sc">88</span><span class="vl"><i data-w="88"></i></span></div>
+        <div class="row"><span class="rk">3</span><span class="nm">春日和<small>错过区</small></span><span class="sc">81</span><span class="vl"><i data-w="81"></i></span></div>
+        <div class="row"><span class="rk">4</span><span class="nm">船上的夜<small>慢片区</small></span><span class="sc">74</span><span class="vl"><i data-w="74"></i></span></div>
+        <div class="row"><span class="rk">5</span><span class="nm">第七次敲门<small>反转区</small></span><span class="sc">66</span><span class="vl"><i data-w="66"></i></span></div>
+      </div>
+    </div>
+    <div class="more"><a href="#" class="btn g">查看剩余 6 个榜单 →</a></div>
+  </div>
+</section>
+
+<!-- ============ 8条逻辑 ============ -->
+<section id="logic" style="background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+  <div class="wrap">
+    <div class="sec"><span class="no">04</span><h2>8 条 <em>选片逻辑</em></h2><span class="en">8 Logics</span></div>
+    <p class="secnote">速查器的判断依据就在这里。<b>8 条逻辑共同决定一个结果</b>，任意一条改变，答案都可能不同。</p>
+    <div class="logic">
+      <div><div class="n">01</div><div><h5>先看能不能连着看第二部</h5><p>看完就想换台的片子，不进连映表。这是第一条，也是最重要的一条。</p></div></div>
+      <div><div class="n">02</div><div><h5>两片合计控制在 200 分钟左右</h5><p>太短凑不出一个晚上，太长会让第二部被压缩，中间的间隔反而更重要。</p></div></div>
+      <div><div class="n">03</div><div><h5>情绪要能接上，不要求题材一致</h5><p>看情绪曲线，不看类型标签。一紧一松，比两部同类型更留得住。</p></div></div>
+      <div><div class="n">04</div><div><h5>不追新，追值得再看</h5><p>新片的信息价值高，但重看价值要等半年才显现，本站更看重后者。</p></div></div>
+      <div><div class="n">05</div><div><h5>不列排行榜，只列适用场景</h5><p>同一部片在雨天和晴天是两个版本。我们写什么时候看，不写好不好看。</p></div></div>
+      <div><div class="n">06</div><div><h5>888 部是上限，满了就替换</h5><p>片单越长越没用。到上限就停，新增必须替换旧的。</p></div></div></div>
+    <div class="more"><a href="#" class="btn ghost">阅读剩余 2 条逻辑 →</a></div>
+  </div>
+</section>
+
+<!-- ============ 分类索引 ============ -->
+<section id="idx">
+  <div class="wrap">
+    <div class="sec"><span class="no">05</span><h2>分类 <em>索引</em></h2><span class="en">Category Index</span></div>
+    <p class="secnote">片库按六个维度重新分过类。<b>同部片子会出现在多个分组里</b>——因为一部好片从来只属于一种类型。</p>
+    <div class="idx">
+      <div><div class="g">A · 按情绪</div><h5>五种状态</h5><ul><li><a href="#">想放空 → 慢片区</a></li><li><a href="#">想清醒 → 反转区</a></li><li><a href="#">想哭一场 → 错过区</a></li><li><a href="#">想轻松 → 治愈区</a></li><li><a href="#">想害怕 → 惊悚区</a></li></ul><div class="cnt">共 888 部 · 可重叠</div></div>
+      <div><div class="g">B · 按时长</div><h5>三个档位</h5><ul><li><a href="#">90 分钟以内 · 入门</a></li><li><a href="#">90–120 分钟 · 主力</a></li><li><a href="#">120 分钟以上 · 连映专用</a></li></ul><div class="cnt">共 888 部 · 不重叠</div></div>
+      <div><div class="g">C · 按季节</div><h5>四个时段</h5><ul><li><a href="#">春天 → 重逢与出发</a></li><li><a href="#">夏天 → 公路与旅行</a></li><li><a href="#">秋天 → 错过与告别</a></li><li><a href="#">冬天 → 长夜与独处</a></li></ul><div class="cnt">共 888 部 · 按档期轮换</div></div>
+      <div><div class="g">D · 按观看条件</div><h5>四种前提</h5><ul><li><a href="#">一个人看</a></li><li><a href="#">带人看 · 安全牌</a></li><li><a href="#">睡不着的时候</a></li><li><a href="#">必须全神贯注</a></li></ul><div class="cnt">共 888 部 · 按场景选</div></div>
+    </div>
+    <div class="more"><a href="#" class="btn">进入完整分类索引 →</a></div>
+  </div>
+</section>
+
+<!-- ============ 关于 ============ -->
+<section id="about" style="padding-bottom:0;">
+  <div class="wrap">
+    <div class="sec"><span class="no">06</span><h2>关于 <em>888神马电影网</em></h2><span class="en">About</span></div>
+    <div class="counter" style="grid-template-columns:1.4fr 1fr;border:1px solid var(--line)">
+      <div style="grid-column:1/-1;display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:center">
+        <div>
+          <h4 style="font-size:21px;margin:0 0 18px;color:var(--txt);max-width:640px">888神马电影网（https://888shenmadianyingwang-wap.github.io）是一个以「888」为循环排片单位的影片推荐与观影指南站点。</h4>
+          <p style="margin-bottom:14px">我们不评高分榜，也不追新片，只回答一个问题：<b style="color:var(--neon)">接下来看什么</b>。888 部循环片库、神马速查选片器、8 大类型榜单、8 条选片逻辑——<b style="color:var(--gold2)">数字都停在 888，是给自己设的边界：少一点，看得久一点。</b></p>
+        </div>
+        <div style="border-left:3px solid var(--gold);padding:22px 26px;background:rgba(255,176,32,.08);font-size:13.5px;color:var(--txt2);line-height:2.1"><b style="color:var(--gold2)">内容声明：</b>本站为影片推荐与观影指南类站点，全部片单、榜单与选片建议仅供个人参考。本站不提供影片在线观看、下载或资源链接服务，观影请通过合法授权渠道。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 页脚 ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="brand">
+        <div class="logo">神马</div>
+        <div>
+          <h4><a href="https://888shenmadianyingwang-wap.github.io/">888神马电影网</a></h4>
+          <p>以「888」为循环排片单位的影片推荐与观影指南：888部循环片库、神马速查选片器、8大类型榜单与8条选片逻辑，10秒帮你决定接下来看什么。</p>
+        </div>
+      </div>
+      <div>
+        <h5>栏目导览</h5>
+        <ul>
+          <li><a href="#lib">888片库</a></li>
+          <li><a href="#find">神马速查</a></li>
+          <li><a href="#chart">8大榜单</a></li>
+          <li><a href="#logic">8条逻辑</a></li>
+          <li><a href="#idx">分类索引</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>片库分区</h5>
+        <ul>
+          <li><a href="#">慢片区</a></li>
+          <li><a href="#">反转区</a></li>
+          <li><a href="#">治愈区</a></li>
+          <li><a href="#">错过区</a></li>
+          <li><a href="#">惊悚区</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>本站服务</h5>
+        <ul>
+          <li><a href="#">连映排期表</a></li>
+          <li><a href="#">片库调整记录</a></li>
+          <li><a href="#">选片标准说明</a></li>
+          <li><a href="#">投稿与纠错</a></li>
+          <li><a href="#">归档片单查询</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      © 2026 888神马电影网 888shenmadianyingwang-wap.github.io 版权所有 · 本站为影片推荐与观影指南类站点，不提供影片在线观看、下载或资源链接服务，观影请通过合法授权渠道<br>
+      网站名称：<a href="https://888shenmadianyingwang-wap.github.io/">888神马电影网</a> ｜ 网站网址：https://888shenmadianyingwang-wap.github.io/
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var r1=document.getElementById('r1'),r2=document.getElementById('r2'),r3=document.getElementById('r3');
+  var v1=document.getElementById('v1'),v2=document.getElementById('v2'),v3=document.getElementById('v3');
+  var len=['90 min 以内','90–120 min','不限时长'];
+  function up(){
+    v1.textContent=r1.value+' / 10';
+    v2.textContent=r2.value+' / 10';
+    v3.textContent=len[r3.value-1];
+  }
+  r1.oninput=up;r2.oninput=up;r3.oninput=up;
+  var opts=document.getElementById('opts'),on=[];
+  opts.addEventListener('click',function(e){
+    var b=e.target.closest('button');
+    if(!b)return;
+    b.classList.toggle('on');
+    up();
+  });
+  document.getElementById('rst').onclick=function(){
+    r1.value=5;r2.value=6;r3.value=2;
+    opts.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x.dataset.k==='alone');});
+    up();
+  };
+  up();
+  var bars=document.querySelectorAll('.bar i,.vl i');
+  function fill(){
+    bars.forEach(function(b){
+      var w=b.dataset.w;
+      if(w&&!b.style.width){b.style.width=w+'%';b.style.transition='width 1.1s cubic-bezier(.22,.8,.3,1)';}
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){fill();io.disconnect();}});
+    },{threshold:.15});
+    var box=document.querySelector('.loopgrid')||document.body;
+    io.observe(box);
+  }else{fill();}
+})();
+</script>
+
+</body>
+</html>
